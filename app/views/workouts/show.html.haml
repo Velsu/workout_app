@@ -4,6 +4,15 @@
 	%p= @workout.mood
 	%p= @workout.length
 
-	= link_to "Back", root_path, class: "btn btn-default"
-	= link_to "Edit", edit_workout_path(@workout), class: "btn btn-warning"
-	= link_to "Delete", workout_path(@workout), method: :delete, data: {confirm: "Are You sure?"}, class: "btn btn-danger"
+#exercises
+	%h2 Exercises
+	= render @workout.exercises
+
+	%h3 Add Exercise
+	= render 'exercises/form'
+
+%br
+
+= link_to "Back", root_path, class: "btn btn-default"
+= link_to "Edit", edit_workout_path(@workout), class: "btn btn-warning"
+= link_to "Delete", workout_path(@workout), method: :delete, data: {confirm: "Are You sure?"}, class: "btn btn-danger"
