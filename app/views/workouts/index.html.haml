@@ -1,4 +1,4 @@
 - @workouts.each do |workout|
 	#workout
-		%h2= workout.date
+		%h2= link_to workout.date, workout
 		%h3= workout.workout

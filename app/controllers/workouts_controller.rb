@@ -25,7 +25,7 @@ class WorkoutsController < ApplicationController
 	end
 
 	def update
-		if @workout.update_attributes(workout_params)
+		if @workout.update(workout_params)
 			redirect_to @workout
 		else
 			render 'edit'
